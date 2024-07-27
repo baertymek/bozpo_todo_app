@@ -1,0 +1,16 @@
+[theme~="dark"] {
+    --lumo-base-color: #261f44;
+    --lumo-primary-color: #5f800a;
+    --lumo-font-family: 'Calibri';
+    --lumo-body-text-color: #c7c7c7;
+    --lumo-primary-text-color: #c7c7c7;
+}
+
+.task-finished {
+    text-decoration: line-through;
+    color: #848484;
+}
+
+.remove-button {
+    border-radius: 1em;
+}
