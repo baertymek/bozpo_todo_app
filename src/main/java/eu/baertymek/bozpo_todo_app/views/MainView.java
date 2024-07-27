@@ -44,7 +44,7 @@ public class MainView extends VerticalLayout {
 
         // Input field with button
         input = new MessageInput();
-        input.setI18n(new MessageInputI18n().setMessage("Popis aktivity").setSend("Uložiť"));
+        input.setI18n(new MessageInputI18n().setMessage("Popis úlohy").setSend("Uložiť"));
         input.setWidth(25, Unit.EM);
         input.addSubmitListener(submitEvent -> {
             Task task = new Task(submitEvent.getValue());
@@ -168,6 +168,7 @@ public class MainView extends VerticalLayout {
     }
 
     private void updateMaxPages() {
-        pageCountNumber.setValue(Math.ceil(service.countTasks()/10.0));
+        Double count = Math.ceil(service.countTasks()/10.0);
+        pageCountNumber.setValue(count > 0 ? count : 1);
     }
 }
